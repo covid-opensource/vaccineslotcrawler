@@ -19,15 +19,20 @@ def main():
         if os.path.exists(filepath):
             input_json = get_info(filepath)
 
-            if input_json["districts"][district]:
-                district_info = input_json["districts"][district]
-                display_info_dict(district_info)
+            if "districts" in input_json:
+                if district in input_json["districts"]:
+                    district_info = input_json["districts"][district]
+                    display_info_dict(district_info)
 
-                if isinstance(district_info["refresh_rate"], int):
-                    refresh_rate = int(district_info["refresh_rate"])
+                    if isinstance(district_info["refresh_rate"], int):
+                        refresh_rate = int(district_info["refresh_rate"])
+                    else:
+                        # Set default refresh_rate as 5 seconds
+                        refresh_rate = 5
                 else:
-                    # Set default refresh_rate as 5 seconds
-                    refresh_rate = 5
+                    error(f"Missing {district} details in input.json")
+                    error("Exiting script...")
+                    sys.exit(1)
 
         else:
             print(f"Missing {filepath}")
