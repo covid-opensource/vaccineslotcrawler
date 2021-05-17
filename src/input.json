@@ -1,0 +1,21 @@
+{
+  "cowin": {
+    "calender_api_url": "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id={0}&date={1}",
+    "calender_api_public_url": "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={0}&date={1}"
+  },
+  "telegram": {
+    "bot_api_key": "1881620453:AAHohggV5AoCfM9PhSEwqOoHV0QPSMRu4Q4",
+    "telegram_chat_url": "https://api.telegram.org/bot{}/sendMessage?parse_mode=markdown&chat_id={}&text={}"
+  },
+  "districts": {
+    "jodhpur": {
+      "district_ids": [
+        "502"
+      ],
+      "min_age": 18,
+      "min_slots": 10,
+      "refresh_rate": 5,
+      "telegram_channel_id": "@testviksharma1987"
+    }
+  }
+}
