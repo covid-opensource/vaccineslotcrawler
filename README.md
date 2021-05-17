@@ -64,6 +64,8 @@ How to create a Telegram bot and how to send text message to a telegram group/ch
 * Run below command for help.
      
       python -u app.py --help
+      
+* If you are running the code on a windows or linux machine and if slots are available, it will make a beep sound, to stop the sound comment this [line](https://github.com/covid-opensource/vaccineslotcrawler/blob/2d9f94c1232474616a36b2045270a571b79ad257/src/api.py#L111).
 
 
 ## Run as docker container
