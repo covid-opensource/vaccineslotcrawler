@@ -64,3 +64,19 @@ How to create a Telegram bot and how to send text message to a telegram group/ch
 * Run below command for help.
      
       python -u app.py --help
+
+
+## Run as docker container
+      
+      cd vaccineslotcrawler
+      export version="v1"
+      
+      # Docker build
+      docker build -t cowin:$version .
+
+      # Docker run      
+      docker run -it cowin:$version
+      
+      # Docker tag and push over docker registry.
+      docker tag cowin:$version <your_docker_registry>:$version
+      docker push <your_docker_registry>:$version
