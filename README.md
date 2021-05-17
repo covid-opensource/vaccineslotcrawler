@@ -52,4 +52,15 @@ How to create a Telegram bot and how to send text message to a telegram group/ch
 
 ## Run the code
 
-* Update `input.json`
+* Update `input.json` as per above schema. 
+* Run below commands
+
+      cd src
+      python -u app.py -d <district_name>
+      
+      example 
+      python -u app.py -d jodhpur
+      
+* Run below command for help.
+     
+      python -u app.py --help
