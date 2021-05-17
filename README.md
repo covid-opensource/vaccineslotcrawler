@@ -1,1 +1,1 @@
-# cowinslotcrawler
+# Vaccine slot crawler
