@@ -1,7 +1,7 @@
 import os, sys, copy, time, json, random, argparse, tabulate, datetime, requests
 from inputimeout import inputimeout, TimeoutOccurred
 
-WARNING_BEEP_DURATION = (2000, 4000)
+WARNING_BEEP_DURATION = (2000, 500)
 
 try:
     import winsound

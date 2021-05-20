@@ -2,6 +2,7 @@
 import os, sys, time, copy, argparse
 from types import SimpleNamespace
 from fake_useragent import UserAgent
+from threading import Thread
 
 from utils import get_info, display_info_dict, prepare, prepareTelegramMessage, post_telegram, error, warn, success, slot, beep, WARNING_BEEP_DURATION
 
@@ -108,7 +109,9 @@ def main():
                                             district_info["telegram_channel_id"],
                                             telegram_message)
 
-                            beep(WARNING_BEEP_DURATION[0], WARNING_BEEP_DURATION[1])
+                            # beep(WARNING_BEEP_DURATION[0], WARNING_BEEP_DURATION[1])
+                            thread = Thread(target=beep, args=(WARNING_BEEP_DURATION[0], WARNING_BEEP_DURATION[1],))
+                            thread.start()
 
                     else:
                         error("\n\nNo new slots, repeat message.\n\n")
