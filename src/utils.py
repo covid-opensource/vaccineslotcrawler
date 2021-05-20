@@ -180,7 +180,7 @@ def check_calendar_by_district(url, request_header, district_name, district_ids,
             elif resp.status_code == 200:
                 resp = resp.json()
                 if 'centers' in resp:
-                    success(f"Centers available in {district_name} from {start_date} as of {today.strftime('%d-%m-%Y %H:%M:%S')}: {len(resp['centers'])}")
+                    success(f"Centers available for {min_age}+ age in {district_name}({district}) from {start_date} as of {today.strftime('%d-%m-%Y %H:%M:%S')}: {len(resp['centers'])}")
                     options += viable_options(resp, min_slots, min_age)
 
             else:
