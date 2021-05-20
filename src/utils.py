@@ -128,24 +128,12 @@ def viable_options(resp, min_slots, min_age):
         for center in resp['centers']:
             sessions = []
             for session in center['sessions']:
-                if ((session['available_capacity'] >= min_slots) \
-                        or (session['available_capacity_dose1'] >= min_slots) \
-                        or (session['available_capacity_dose2'] >= min_slots)) \
-                        and (session['min_age_limit'] <= min_age):
-                    sessions.append(session)
-
-                else:
-                    pass
+                if (int(session['min_age_limit']) <= min_age) and (int(session['available_capacity']) >= min_slots):
+                        sessions.append(session)
 
             if len(sessions) > 0:
                 center["sessions"] = sessions
                 options.append(center)
-
-            else:
-                pass
-
-    else:
-        pass
 
     return options
 
