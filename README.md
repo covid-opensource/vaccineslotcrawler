@@ -34,7 +34,7 @@
       "min_age": 18,
       "min_slots": 5,
       "refresh_rate": 1,
-      "telegram_channel_id": "@<provide telegram channel id>"
+      "telegram_channel_id": "@upwinder"
     }
   }
 }
