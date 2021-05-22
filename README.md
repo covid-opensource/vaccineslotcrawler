@@ -27,13 +27,13 @@
     "telegram_chat_url": "https://api.telegram.org/bot{}/sendMessage?parse_mode=markdown&chat_id={}&text={}"
   },
   "districts": {
-    "jodhpur": {
+    "jaipur I": {
       "district_ids": [
-        "502"
+        "505"
       ],
       "min_age": 18,
       "min_slots": 5,
-      "refresh_rate": 5,
+      "refresh_rate": 1,
       "telegram_channel_id": "@<provide telegram channel id>"
     }
   }
@@ -59,7 +59,7 @@ How to create a Telegram bot and how to send text message to a telegram group/ch
       python -u app.py -d <district_name>
       
       example 
-      python -u app.py -d jodhpur
+      python -u app.py -d jaipur
       
 * Run below command for help.
      
